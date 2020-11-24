@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>QACAD NOTAS</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    
+</head>
+<body class="container">
+    
+    <h1 class="text-center">Cadastro de Notas de Alunos</h1>
+    <div style="margin-bottom: 2rem">
+
+   
+    <div id="js-mensagem-view"></div>    
+    
+    <form class="form" onsubmit="alunoController.adiciona(event )">
+        
+        <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" placeholder="O nome do aluno" class="form-control" required autofocus value="" />
+        </div>
+
+        <div class="form-group">
+            <label for="primeiraNota">Primeira Nota</label>
+            <input type="number" id="primeiraNota" placeholder="A primeira nota do aluno" class="form-control" required autofocus />
+        </div>
+
+        <div class="form-group">
+            <label for="segundaNota">Segunda Nota</label>
+            <input type="number" id="segundaNota" placeholder="A segunda nota do aluno" class="form-control" required autofocus />
+        </div>
+
+        <div class="form-group">
+            <label for="frequencia">Percentual de Frequência (%)</label>
+            <input type="number" id="frequencia" placeholder="Porcentagem de faltas do aluno" class="form-control" required autofocus />
+        </div>
+
+        <div class="form-group">
+            <label for="final">Prova Final</label>
+            <input type="number" id="final" placeholder="Se o aluno não fez prova final digite 0" class="form-control" required autofocus />
+        </div>
+
+        
+
+        
+        <div class="text-center">
+            <button id="btnCadastro" class="btn btn-primary" 
+                    type="submit">Adicionar Aluno</button>
+            <button class="btn btn-default" 
+                    type="reset">Limpar</button>
+        </div>
+    
+    </form>
+   </div> 
+
+    <div id="js-cadastroAlunoView"></div>
+
+    <script src="js/app/models/CadastroAluno.js"></script>
+    <script src="js/app/controllers/AlunoController.js"></script>
+    <script src="js/app/models/Aluno.js"></script>
+    <script src="js/app/views/View.js"></script>
+    <script src="js/app/views/AlunoView.js"></script>
+    <script src="js/app/models/Mensagem.js"></script>
+    <script src="js/app/views/MensagemView.js"></script>
+
+    
+    <script>
+       let alunoController = new AlunoController();
+    </script>
+
+</body>
+</html>
